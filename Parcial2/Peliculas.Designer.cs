@@ -47,10 +47,10 @@
             this.btnanterior = new System.Windows.Forms.Button();
             this.btnprimero = new System.Windows.Forms.Button();
             this.grbEdicion = new System.Windows.Forms.GroupBox();
+            this.btndelete = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.btndelete = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grbPeliculas.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
@@ -59,6 +59,7 @@
             // 
             // grbPeliculas
             // 
+            this.grbPeliculas.BackColor = System.Drawing.Color.Yellow;
             this.grbPeliculas.Controls.Add(this.lblidpelicula);
             this.grbPeliculas.Controls.Add(this.textBox6);
             this.grbPeliculas.Controls.Add(this.label6);
@@ -183,6 +184,7 @@
             // 
             // grbNavegacion
             // 
+            this.grbNavegacion.BackColor = System.Drawing.SystemColors.ControlDark;
             this.grbNavegacion.Controls.Add(this.lblnregistros);
             this.grbNavegacion.Controls.Add(this.btnultimo);
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
@@ -252,6 +254,7 @@
             // 
             // grbEdicion
             // 
+            this.grbEdicion.BackColor = System.Drawing.SystemColors.Highlight;
             this.grbEdicion.Controls.Add(this.btndelete);
             this.grbEdicion.Controls.Add(this.btnBuscar);
             this.grbEdicion.Controls.Add(this.btnModificar);
@@ -265,6 +268,17 @@
             this.grbEdicion.TabStop = false;
             this.grbEdicion.Text = "Edicion";
             this.grbEdicion.Enter += new System.EventHandler(this.grbEdicion_Enter);
+            // 
+            // btndelete
+            // 
+            this.btndelete.Location = new System.Drawing.Point(107, 15);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(1);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(62, 33);
+            this.btndelete.TabIndex = 5;
+            this.btndelete.Text = "Eliminar";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
             // btnBuscar
             // 
@@ -299,17 +313,6 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btndelete
-            // 
-            this.btndelete.Location = new System.Drawing.Point(107, 15);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(1);
-            this.btndelete.Name = "btndelete";
-            this.btndelete.Size = new System.Drawing.Size(62, 33);
-            this.btndelete.TabIndex = 5;
-            this.btndelete.Text = "Eliminar";
-            this.btndelete.UseVisualStyleBackColor = true;
-            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
-            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(547, 347);
@@ -324,13 +327,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbPeliculas);
             this.Name = "Peliculas";
-            this.Text = "Peliculas";
+            this.Text = "Peliculas!";
             this.Load += new System.EventHandler(this.Peliculas_Load);
             this.grbPeliculas.ResumeLayout(false);
             this.grbPeliculas.PerformLayout();

@@ -11,12 +11,13 @@ namespace Parcial2
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        public static Principal Principal;
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Alquiler());
+            Application.Run(Principal=new Principal());
         }
     }
 }

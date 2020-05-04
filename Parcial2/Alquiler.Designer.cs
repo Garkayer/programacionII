@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.grbAlquiler = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.TxtValor = new System.Windows.Forms.TextBox();
+            this.lblValor = new System.Windows.Forms.Label();
+            this.TxtFechaDevolucion = new System.Windows.Forms.TextBox();
+            this.txtfechaprestamo = new System.Windows.Forms.TextBox();
             this.lblidalquiler = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,15 +53,9 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.CboClientes = new System.Windows.Forms.ComboBox();
             this.CboPelicula = new System.Windows.Forms.ComboBox();
-            this.txtfechaprestamo = new System.Windows.Forms.TextBox();
-            this.TxtFechaDevolucion = new System.Windows.Forms.TextBox();
-            this.lblValor = new System.Windows.Forms.Label();
-            this.TxtValor = new System.Windows.Forms.TextBox();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.grbAlquiler.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbEdicion.SuspendLayout();
@@ -63,14 +63,15 @@
             // 
             // grbAlquiler
             // 
+            this.grbAlquiler.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.grbAlquiler.Controls.Add(this.CboPelicula);
+            this.grbAlquiler.Controls.Add(this.CboClientes);
             this.grbAlquiler.Controls.Add(this.button2);
             this.grbAlquiler.Controls.Add(this.button1);
             this.grbAlquiler.Controls.Add(this.TxtValor);
             this.grbAlquiler.Controls.Add(this.lblValor);
             this.grbAlquiler.Controls.Add(this.TxtFechaDevolucion);
             this.grbAlquiler.Controls.Add(this.txtfechaprestamo);
-            this.grbAlquiler.Controls.Add(this.CboPelicula);
-            this.grbAlquiler.Controls.Add(this.CboClientes);
             this.grbAlquiler.Controls.Add(this.lblidalquiler);
             this.grbAlquiler.Controls.Add(this.textBox6);
             this.grbAlquiler.Controls.Add(this.label6);
@@ -87,6 +88,57 @@
             this.grbAlquiler.TabIndex = 3;
             this.grbAlquiler.TabStop = false;
             this.grbAlquiler.Text = "Registro de peliculas";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(268, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(268, 52);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // TxtValor
+            // 
+            this.TxtValor.Location = new System.Drawing.Point(109, 202);
+            this.TxtValor.Margin = new System.Windows.Forms.Padding(1);
+            this.TxtValor.Name = "TxtValor";
+            this.TxtValor.Size = new System.Drawing.Size(81, 20);
+            this.TxtValor.TabIndex = 45;
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(13, 205);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(31, 13);
+            this.lblValor.TabIndex = 44;
+            this.lblValor.Text = "Valor";
+            // 
+            // TxtFechaDevolucion
+            // 
+            this.TxtFechaDevolucion.Location = new System.Drawing.Point(109, 171);
+            this.TxtFechaDevolucion.Name = "TxtFechaDevolucion";
+            this.TxtFechaDevolucion.Size = new System.Drawing.Size(131, 20);
+            this.TxtFechaDevolucion.TabIndex = 43;
+            // 
+            // txtfechaprestamo
+            // 
+            this.txtfechaprestamo.Location = new System.Drawing.Point(109, 135);
+            this.txtfechaprestamo.Name = "txtfechaprestamo";
+            this.txtfechaprestamo.Size = new System.Drawing.Size(131, 20);
+            this.txtfechaprestamo.TabIndex = 42;
             // 
             // lblidalquiler
             // 
@@ -158,6 +210,7 @@
             // 
             // grbNavegacion
             // 
+            this.grbNavegacion.BackColor = System.Drawing.Color.Yellow;
             this.grbNavegacion.Controls.Add(this.lblnregistros);
             this.grbNavegacion.Controls.Add(this.btnultimo);
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
@@ -227,6 +280,7 @@
             // 
             // grbEdicion
             // 
+            this.grbEdicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.grbEdicion.Controls.Add(this.btndelete);
             this.grbEdicion.Controls.Add(this.btnBuscar);
             this.grbEdicion.Controls.Add(this.btnModificar);
@@ -284,55 +338,6 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // CboClientes
-            // 
-            this.CboClientes.FormattingEnabled = true;
-            this.CboClientes.Location = new System.Drawing.Point(86, 63);
-            this.CboClientes.Margin = new System.Windows.Forms.Padding(1);
-            this.CboClientes.Name = "CboClientes";
-            this.CboClientes.Size = new System.Drawing.Size(154, 21);
-            this.CboClientes.TabIndex = 16;
-            // 
-            // CboPelicula
-            // 
-            this.CboPelicula.FormattingEnabled = true;
-            this.CboPelicula.Location = new System.Drawing.Point(82, 103);
-            this.CboPelicula.Margin = new System.Windows.Forms.Padding(1);
-            this.CboPelicula.Name = "CboPelicula";
-            this.CboPelicula.Size = new System.Drawing.Size(154, 21);
-            this.CboPelicula.TabIndex = 30;
-            // 
-            // txtfechaprestamo
-            // 
-            this.txtfechaprestamo.Location = new System.Drawing.Point(109, 135);
-            this.txtfechaprestamo.Name = "txtfechaprestamo";
-            this.txtfechaprestamo.Size = new System.Drawing.Size(131, 20);
-            this.txtfechaprestamo.TabIndex = 42;
-            // 
-            // TxtFechaDevolucion
-            // 
-            this.TxtFechaDevolucion.Location = new System.Drawing.Point(109, 171);
-            this.TxtFechaDevolucion.Name = "TxtFechaDevolucion";
-            this.TxtFechaDevolucion.Size = new System.Drawing.Size(131, 20);
-            this.TxtFechaDevolucion.TabIndex = 43;
-            // 
-            // lblValor
-            // 
-            this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(13, 205);
-            this.lblValor.Name = "lblValor";
-            this.lblValor.Size = new System.Drawing.Size(31, 13);
-            this.lblValor.TabIndex = 44;
-            this.lblValor.Text = "Valor";
-            // 
-            // TxtValor
-            // 
-            this.TxtValor.Location = new System.Drawing.Point(109, 202);
-            this.TxtValor.Margin = new System.Windows.Forms.Padding(1);
-            this.TxtValor.Name = "TxtValor";
-            this.TxtValor.Size = new System.Drawing.Size(81, 20);
-            this.TxtValor.TabIndex = 45;
-            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(528, 30);
@@ -343,35 +348,33 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // button1
+            // CboClientes
             // 
-            this.button1.Location = new System.Drawing.Point(268, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CboClientes.FormattingEnabled = true;
+            this.CboClientes.Location = new System.Drawing.Point(109, 63);
+            this.CboClientes.Name = "CboClientes";
+            this.CboClientes.Size = new System.Drawing.Size(121, 21);
+            this.CboClientes.TabIndex = 48;
             // 
-            // button2
+            // CboPelicula
             // 
-            this.button2.Location = new System.Drawing.Point(268, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 47;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CboPelicula.FormattingEnabled = true;
+            this.CboPelicula.Location = new System.Drawing.Point(109, 100);
+            this.CboPelicula.Name = "CboPelicula";
+            this.CboPelicula.Size = new System.Drawing.Size(121, 21);
+            this.CboPelicula.TabIndex = 49;
             // 
             // Alquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbAlquiler);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Alquiler";
             this.Text = "Alquiler";
             this.Load += new System.EventHandler(this.Alquiler_Load);
@@ -409,10 +412,10 @@
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.TextBox TxtFechaDevolucion;
         private System.Windows.Forms.TextBox txtfechaprestamo;
-        private System.Windows.Forms.ComboBox CboPelicula;
-        private System.Windows.Forms.ComboBox CboClientes;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox CboPelicula;
+        private System.Windows.Forms.ComboBox CboClientes;
     }
 }

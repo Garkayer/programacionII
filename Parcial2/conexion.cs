@@ -94,7 +94,7 @@ namespace Parcial2
             if (accion == "nuevo")
             {
 
-                sql = "INSERT INTO peliculas (descripcion, sinopsis, genero, duracion) VALUES(" +
+                sql = "INSERT INTO peliculas (descripcion, sipnosis, genero, duracion) VALUES(" +
 
                     "'" + datos[1] + "'," +
                     "'" + datos[2] + "'," +
@@ -109,7 +109,7 @@ namespace Parcial2
 
                 sql = "UPDATE peliculas SET " +
                 " descripcion            = '" + datos[1] + "'," +
-                " sinopsis               = '" + datos[2] + "'," +
+                " sipnosis               = '" + datos[2] + "'," +
                 " genero                 = '" + datos[3] + "'," +
                 " duracion               = '" + datos[4] + "'" +
                 "WHERE IdPelicula         = '" + datos[0] + "'";

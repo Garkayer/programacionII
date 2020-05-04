@@ -51,6 +51,7 @@
             this.btneliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbDatosClientes.SuspendLayout();
             this.grbNavegacion.SuspendLayout();
             this.grbEdicion.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             // grbDatosClientes
             // 
+            this.grbDatosClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.grbDatosClientes.Controls.Add(this.lblidCliente);
             this.grbDatosClientes.Controls.Add(this.textBox6);
             this.grbDatosClientes.Controls.Add(this.label6);
@@ -182,6 +184,7 @@
             // 
             // grbNavegacion
             // 
+            this.grbNavegacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.grbNavegacion.Controls.Add(this.lblnregistros);
             this.grbNavegacion.Controls.Add(this.btnultimo);
             this.grbNavegacion.Controls.Add(this.btnsiguiente);
@@ -251,6 +254,7 @@
             // 
             // grbEdicion
             // 
+            this.grbEdicion.BackColor = System.Drawing.Color.Aqua;
             this.grbEdicion.Controls.Add(this.btnBuscar);
             this.grbEdicion.Controls.Add(this.btneliminar);
             this.grbEdicion.Controls.Add(this.btnModificar);
@@ -266,13 +270,14 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.BackColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(171, 16);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(1);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(62, 33);
             this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btneliminar
@@ -308,15 +313,27 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(539, 63);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grbEdicion);
             this.Controls.Add(this.grbNavegacion);
             this.Controls.Add(this.grbDatosClientes);
-            this.Name = "Form1";
+            this.Name = "Clientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grbDatosClientes.ResumeLayout(false);
@@ -353,6 +370,7 @@
         private System.Windows.Forms.Button btneliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button button1;
     }
 }
 
