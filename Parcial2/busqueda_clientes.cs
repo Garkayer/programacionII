@@ -21,6 +21,7 @@ namespace Parcial2
 
         private void busqueda_clientes_Load(object sender, EventArgs e)
         {
+            grdBusquedaClientes.DataSource = objConexion.obtener_datos().Tables["clientes"].DefaultView;
 
         }
 
@@ -38,11 +39,7 @@ namespace Parcial2
             }
         }
 
-        private void busqueda_clientes_Load1(object sender, EventArgs e)
-        {
-            grdBusquedaClientes.DataSource =
-               objConexion.obtener_datos().Tables["clientes"].DefaultView;
-        }
+        
         void filtrar_datos(String valor)
         {
             BindingSource bs = new BindingSource();
@@ -59,6 +56,21 @@ namespace Parcial2
         private void btncancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void grdBusquedaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtbuscar_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblbuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
